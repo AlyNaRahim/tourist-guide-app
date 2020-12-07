@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     TextView setTime;
     TextView setDate;
@@ -44,12 +44,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTime.setText(time);
         setDate.setText(date);
 
-        destination.setOnClickListener(this);
+        //destination.setOnClickListener(this);
+
+        destination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity011();
+            }
+        });
+
+        accommodation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity012();
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this,DestinationActivity.class);
-        startActivity(intent);
+    public void openActivity011() {
+        Intent intent1 = new Intent(this, Towns.class);
+        startActivity(intent1);
+    }
+
+    public void openActivity012() {
+        Intent intent2 = new Intent(this, DestinationActivity.class);
+        startActivity(intent2);
     }
 }
