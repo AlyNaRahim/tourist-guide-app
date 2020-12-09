@@ -16,7 +16,6 @@ import java.util.List;
 public class TownAdapter extends RecyclerView.Adapter <TownAdapter.ViewHolder>{
 
     private LayoutInflater layoutInflater;
-    //private List <String> data;
     private List<TownCardItem> items;
 
    TownAdapter(Context context, List<TownCardItem> items){

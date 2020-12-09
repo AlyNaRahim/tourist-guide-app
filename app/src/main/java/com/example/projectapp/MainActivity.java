@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         setTime.setText(time);
         setDate.setText(date);
 
-        //destination.setOnClickListener(this);
 
         destination.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +52,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        accommodation.setOnClickListener(new View.OnClickListener() {
+        eatDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity012();
+            }
+        });
+
+        accommodation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity013();
             }
         });
     }
@@ -67,7 +73,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivity012() {
-        Intent intent2 = new Intent(this, DestinationActivity.class);
+        Intent intent2 = new Intent(this, EatAndDrink.class);
+        startActivity(intent2);
+    }
+
+    public void openActivity013() {
+        Intent intent2 = new Intent(this, Hotels.class);
         startActivity(intent2);
     }
 }

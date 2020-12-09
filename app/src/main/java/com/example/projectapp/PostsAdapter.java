@@ -1,10 +1,13 @@
 package com.example.projectapp;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,7 +33,12 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-        holder.setPostImage(postItems.get(position));
+        final PostItem eatDrink = postItems.get(position);
+
+        holder.title2.setText(eatDrink.getTitle());
+        holder.genre.setText(eatDrink.getSubHeading());
+        holder.rating.setRating((float) eatDrink.getRating());
+        holder.postImageView.setBackgroundResource(eatDrink.getImage());
 
     }
 
@@ -40,10 +48,16 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder{
-        RoundedImageView postImageView;
+        ImageView postImageView;
+        TextView title2, genre;
+        RatingBar rating;
         public PostViewHolder(@NonNull final View itemView) {
             super(itemView);
-            postImageView = itemView.findViewById(R.id.imagePost);
+            postImageView = itemView.findViewById(R.id.view2);
+            title2 = itemView.findViewById(R.id.textView9);
+            genre = itemView.findViewById(R.id.textView10);
+            rating = itemView.findViewById(R.id.ratingBar2);
+
         }
 
         void setPostImage (PostItem postItem){

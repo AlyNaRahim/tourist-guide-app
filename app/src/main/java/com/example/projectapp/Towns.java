@@ -1,6 +1,7 @@
 package com.example.projectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,7 +31,7 @@ public class Towns extends AppCompatActivity {
         items.add(new TownCardItem("Jalalabad", R.drawable.jalalabad));
 
 
-        recyclerViewTowns = findViewById(R.id.rcviewHotels);
+        recyclerViewTowns = findViewById(R.id.rcviewTowns);
         recyclerViewTowns.setLayoutManager(new LinearLayoutManager(this));
         adapter = new TownAdapter(this, items);
         recyclerViewTowns.setAdapter(adapter);
