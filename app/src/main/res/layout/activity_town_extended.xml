@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TownExtended"
+    android:layout_margin="20dp"
+    android:paddingTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/header_background2"
+            android:layout_width="412dp"
+            android:layout_height="291dp"
+            android:transitionName="background_image_transition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@id/header_background2">
+
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/raleway_extrabold"
+                    android:text="About"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/about_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/raleway"
+                    android:text="Naryn (Kyrgyz: Нарын, Narın, نارىن, Mongolian : Нарийн, Nariin, Traditional Mongolian ᠨᠠᠷᠢᠨ is the regional administrative center of Naryn Region in central Kyrgyzstan. Its area is 84 square kilometres (32 sq mi), and its estimated population was 40,000 as of January 2019.[1] The town was established as a fortress on the caravan route in 1868.[2] It is situated on both banks of the Naryn River (one of the main head waters of the Syr Darya), which cuts a picturesque gorge through the town. The city has two regional museums and some hotels, but is otherwise residential."
+                    android:textColor="#E21B1B"
+                    android:textSize="15sp" />
+            </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

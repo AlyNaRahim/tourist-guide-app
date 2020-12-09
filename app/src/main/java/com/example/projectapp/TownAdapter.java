@@ -1,6 +1,7 @@
 package com.example.projectapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,8 +52,19 @@ public class TownAdapter extends RecyclerView.Adapter <TownAdapter.ViewHolder>{
 
         private TextView textTitle;
         private  ImageView image;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(v.getContext(),DetailActivity.class);
+                        i.putExtra("title", items.get(getAdapterPosition()).getTitle());
+                        i.putExtra("image", items.get(getAdapterPosition()).getImage());
+                        v.getContext().startActivity(i);
+                    }
+                });
+
             textTitle = itemView.findViewById(R.id.textView5);
             image = itemView.findViewById(R.id.view);
         }

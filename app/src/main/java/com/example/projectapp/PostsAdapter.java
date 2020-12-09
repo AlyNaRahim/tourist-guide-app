@@ -24,15 +24,13 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
         this.postItems = postItems;
     }
 
-    @NonNull
     @Override
-    public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.post_item_container,
-                parent,false));
+    public PostViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new PostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.post_item_container, parent,false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
+    public void onBindViewHolder(PostViewHolder holder, int position) {
         final PostItem eatDrink = postItems.get(position);
 
         holder.title2.setText(eatDrink.getTitle());
@@ -48,9 +46,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder{
-        ImageView postImageView;
-        TextView title2, genre;
-        RatingBar rating;
+        private ImageView postImageView;
+        private TextView title2, genre;
+        private RatingBar rating;
+
         public PostViewHolder(@NonNull final View itemView) {
             super(itemView);
             postImageView = itemView.findViewById(R.id.view2);

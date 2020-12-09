@@ -21,14 +21,14 @@ public class Towns extends AppCompatActivity {
         setContentView(R.layout.activity_towns);
 
         List<TownCardItem> items = new ArrayList<>();
-        items.add(new TownCardItem("Batken", R.drawable.batken));
-        items.add(new TownCardItem("Issykkul", R.drawable.issykkul));
-        items.add(new TownCardItem("Bishkek",  R.drawable.bishkek));
-        items.add(new TownCardItem("Naryn", R.drawable.naryn));
-        items.add(new TownCardItem("Chuii", R.drawable.chuii));
-        items.add(new TownCardItem("Osh", R.drawable.osh));
-        items.add(new TownCardItem("Talas", R.drawable.talas));
-        items.add(new TownCardItem("Jalalabad", R.drawable.jalalabad));
+        items.add(new TownCardItem("BATKEN", R.drawable.batken));
+        items.add(new TownCardItem("ISSYK-KUL", R.drawable.issykkul));
+        items.add(new TownCardItem("BISHKEK",  R.drawable.bishkek));
+        items.add(new TownCardItem("NARYN", R.drawable.naryn));
+        items.add(new TownCardItem("OSH", R.drawable.osh));
+        items.add(new TownCardItem("TALAS", R.drawable.talas));
+        items.add(new TownCardItem("JALALABAD", R.drawable.jalalabad));
+        items.add(new TownCardItem("CHUII", R.drawable.chuii));
 
 
         recyclerViewTowns = findViewById(R.id.rcviewTowns);

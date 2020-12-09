@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivity013() {
-        Intent intent2 = new Intent(this, Hotels.class);
+        Intent intent2 = new Intent(this, Accommodation.class);
         startActivity(intent2);
     }
 }
